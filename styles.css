@@ -9,9 +9,9 @@
     --ff-rale: 'Raleway', sans-serif;
     --fw-100: 100;
     --fw-400: 400;
-    --fw-500: 500;
     --fw-700: 700;
 
+    --pad-sm: .5rem;
     --pad-med: 1rem;
     --pad-lrg: 2rem;
 
@@ -19,13 +19,44 @@
     --radius: 5px;
 }
 
+h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--clr-neutral);
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: var(--fw-100);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: var(--fw-100);
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: var(--fw-100);
+    line-height: 1.2;
+
+}
+
+.project-text {
+    line-height: 1.2;
+}
+
 .page-container {
-    padding: var(--pad-med);
     max-width: 1300px;
     margin: 0 auto;
     position: relative;
     color: var(--clr-grey);
     background: linear-gradient(0deg, var(--clr-turq) 0%, var(--clr-rosy) 100%);
+}
+
+.header-container {
+    display: grid;
+    padding: var(--pad-med);
 }
 
 .image-container {
@@ -34,15 +65,9 @@
     padding-bottom: var(--pad-med);
 }
 
-img {
+.image-container img {
     border-radius: var(--radius);
-}
-
-h1 {
-    position: absolute;
-    bottom: var(--pad-med);
-    left: var(--pad-med);
-    color: var(--clr-neutral);
+    box-shadow: var(--box-shadow);
 }
 
 .icon {
@@ -54,12 +79,22 @@ h1 {
     grid-template-columns: repeat(2, auto);
     justify-content: center;
     gap: var(--pad-med);
+    padding: var(--pad-sm);
+}
+
+.about-container {
+    padding-bottom: 2.5rem;
+}
+
+.main-container {
+    padding: var(--pad-med);
 }
 
 .projects-container {
+    padding: var(--pad-med);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--pad-med);
+    gap: var(--pad-lrg);
 }
 .project {
     background-color: var(--clr-neutral);
@@ -76,4 +111,27 @@ h1 {
     display: grid;
     grid-template-columns: 1fr auto auto;
     gap: var(--pad-med);
+    padding-bottom: var(--pad-sm);
+}
+
+.footer-container {
+    display: grid;
+    gap: var(--pad-med);
+    color: var(--clr-lightrosy);
+}
+
+.contact-container {
+    padding: var(--pad-med);
+}
+
+.space {
+    padding-bottom: var(--pad-med);
+}
+
+.footer-container img {
+    fill: var(--clr-lightrosy);
+}
+
+.footer-img {
+    border-radius: 0;
 }
