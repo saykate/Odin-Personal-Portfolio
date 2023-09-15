@@ -5,5 +5,35 @@
     --fw-500: 500;
     --fw-700: 700;
 
+    --pad-med: 1rem;
+    --pad-lrg: 2rem;
 }
 
+.page-container {
+    padding: var(--pad-med);
+    background: linear-gradient(0deg, rgb(55, 110, 111) 0%, rgb(141, 82, 112) 100%);
+}
+
+.image-container {
+    padding: var(--pad-med);
+    object-fit: cover;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    bottom: var(--pad-med);
+    left: var(--pad-med);
+    color: wheat;
+}
+
+.icon {
+    width: 30px;
+}
+
+.header-icons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: var(--pad-med);
+}
