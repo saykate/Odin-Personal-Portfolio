@@ -11,13 +11,14 @@
 
 .page-container {
     padding: var(--pad-med);
-    background: linear-gradient(0deg, rgb(55, 110, 111) 0%, rgb(141, 82, 112) 100%);
+    position: relative;
+    background: linear-gradient(0deg, rgb(55, 110, 111) 0%, rgb(188, 143, 143) 100%);
 }
 
 .image-container {
-    padding: var(--pad-med);
     object-fit: cover;
     position: relative;
+    padding-bottom: var(--pad-med);
 }
 
 h1 {
@@ -36,4 +37,15 @@ h1 {
     grid-template-columns: repeat(2, auto);
     justify-content: center;
     gap: var(--pad-med);
+}
+
+.project {
+    background-color: bisque;
+}
+
+.project-header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: var(--pad-med);
+    padding: .75rem;
 }
