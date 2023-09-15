@@ -47,6 +47,7 @@ h3 {
 }
 
 .page-container {
+    min-width: 280px;
     max-width: 1300px;
     margin: 0 auto;
     position: relative;
@@ -57,24 +58,25 @@ h3 {
 .header-container {
     display: grid;
     padding: var(--pad-med);
+    justify-items: center;
 }
 
 .image-container {
     object-fit: cover;
     position: relative;
-    padding-bottom: var(--pad-med);
 }
 
 .image-container img {
     border-radius: var(--radius);
     box-shadow: var(--box-shadow);
+    width: 300px;
 }
 
 .icon {
     width: 30px;
 }
 
-.header-icons {
+.header-icons, .footer-icons {
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: center;
@@ -83,6 +85,7 @@ h3 {
 }
 
 .about-container {
+    padding-top: var(--pad-med);
     padding-bottom: 2.5rem;
 }
 
@@ -97,10 +100,12 @@ h3 {
     gap: var(--pad-lrg);
 }
 .project {
-    background-color: var(--clr-neutral);
+    background-color: var(--clr-lightrosy);
     padding: var(--pad-med);
     border-radius: var(--radius);
     box-shadow: var(--box-shadow);
+    display: grid;
+    justify-items: center;
 }
 
 .project-info {
@@ -118,6 +123,7 @@ h3 {
     display: grid;
     gap: var(--pad-med);
     color: var(--clr-lightrosy);
+    justify-items: center;
 }
 
 .contact-container {
@@ -128,10 +134,59 @@ h3 {
     padding-bottom: var(--pad-med);
 }
 
-.footer-container img {
-    fill: var(--clr-lightrosy);
+.contact img {
+    display: none;
 }
 
 .footer-img {
     border-radius: 0;
+    width: 350px;
+}
+
+@media (min-width: 765px) {
+    .header-container {
+        justify-content: left;
+        border: 2px solid green;
+    }
+    .image-container {
+        /* position: static; */
+        border: 2px solid yellow;
+    }
+    h1 {
+        top: 20px;
+        border: 2px solid black;
+    }
+    .main-title {
+        text-align: left;
+        padding-left: var(--pad-med);
+    }
+    .about-container {
+        border: 2px solid red;
+        background-color: var(--clr-lightrosy);
+    }
+    .main-container {
+        padding-bottom: 8rem;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: var(--pad-med);
+    }
+    .contact-title {
+        text-align: left;
+    }
+    .contact img {
+        display: block;
+    }
+    .contact {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: var(--pad-med);
+    }
+    .contact.space {
+        padding-top: var(--pad-sm);
+    }
+    .footer-icons {
+        justify-content: left;
+    }
+
 }
