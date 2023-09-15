@@ -1,4 +1,11 @@
 :root {
+    --clr-rosy: rgb(188, 143, 143);
+    --clr-turq: rgb(55, 110, 111);
+    --clr-grey: rgb(48, 48, 48);
+    --clr-lightrosy: rgb(224, 193, 179);
+    --clr-neutral: rgb(230, 219, 208);
+    --clr-whiteish: rgb(249, 241, 228);
+
     --ff-rale: 'Raleway', sans-serif;
     --fw-100: 100;
     --fw-400: 400;
@@ -7,12 +14,18 @@
 
     --pad-med: 1rem;
     --pad-lrg: 2rem;
+
+    --box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.3);
+    --radius: 5px;
 }
 
 .page-container {
     padding: var(--pad-med);
+    max-width: 1300px;
+    margin: 0 auto;
     position: relative;
-    background: linear-gradient(0deg, rgb(55, 110, 111) 0%, rgb(188, 143, 143) 100%);
+    color: var(--clr-grey);
+    background: linear-gradient(0deg, var(--clr-turq) 0%, var(--clr-rosy) 100%);
 }
 
 .image-container {
@@ -21,11 +34,15 @@
     padding-bottom: var(--pad-med);
 }
 
+img {
+    border-radius: var(--radius);
+}
+
 h1 {
     position: absolute;
     bottom: var(--pad-med);
     left: var(--pad-med);
-    color: wheat;
+    color: var(--clr-neutral);
 }
 
 .icon {
@@ -39,13 +56,24 @@ h1 {
     gap: var(--pad-med);
 }
 
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--pad-med);
+}
 .project {
-    background-color: bisque;
+    background-color: var(--clr-neutral);
+    padding: var(--pad-med);
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+}
+
+.project-info {
+    padding: var(--pad-med) 0;
 }
 
 .project-header {
     display: grid;
     grid-template-columns: 1fr auto auto;
     gap: var(--pad-med);
-    padding: .75rem;
 }
