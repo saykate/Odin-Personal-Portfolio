@@ -46,8 +46,8 @@
 
 h1 {
     position: absolute;
-    /* bottom: 20px;
-    left: 20px; */
+    bottom: 20px;
+    left: 20px;
     color: var(--clr-neutral);
     font-size: 3.5rem;
     line-height: 1;
@@ -150,12 +150,14 @@ h3 {
         justify-items: left;
         padding: var(--pad-lrg);
         position: relative;
-        border: 2px solid green;
+        margin-bottom: var(--pad-lrg);
+        /* border: 2px solid green; */
     }
     .image-container {
         position: static;
+        float: left;
         z-index: 3;
-        border: 2px solid yellow;
+        /* border: 2px solid yellow; */
     }
     .image-container img {
         width: 50vw;
@@ -164,9 +166,9 @@ h3 {
     h1 {
         bottom: auto;
         left: auto;
-        top: 70px;
+        top: 50px;
         right: 100px;
-        border: 2px solid black;
+        /* border: 2px solid black; */
         align-self: center;
         z-index: 4;
     }
@@ -176,15 +178,32 @@ h3 {
     }
     .about-container {
         position: absolute;
-        right: 20px;
-        bottom: 20px;
-        border: 2px solid red;
+        right: 60px;
+        bottom: 0px;
+        /* border: 2px solid red; */
         background-color: var(--clr-lightrosy);
-        width: 80%;
+        width: 70%;
         text-align: right;
-        padding: var(--pad-med);
+        padding: var(--pad-lrg);
+        box-shadow: var(--box-shadow);
         z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        ". title"
+        ". text"
+        ;
     }
+    .about-title {
+        grid-area: title;
+        text-align: center;
+    }
+    .about-text {
+        grid-area: text;
+        text-align: left;
+    }
+
     .main-container {
         padding-bottom: 5rem;
     }
@@ -216,6 +235,33 @@ h3 {
 }
 
 @media (min-width: 1020px) {
+    .header-container {
+        grid-template-columns: auto auto;
+    }
+    .image-container {
+        position: relative;
+        max-width: 400px;
+    }
+    h1 {
+        top: auto;
+        right: auto;
+        bottom: 10px;
+        left: 50px;
+    }
+    .about-container {
+        position: static;
+        display: block;
+        width: auto;
+        align-self: center;
+        text-align: left;
+    }
+    .about-title {
+        text-align: left;
+    }
+    .header-icons {
+        display: grid;
+        justify-content: end;
+    }
     .footer-container {
         padding: var(--pad-lrg);
     }
