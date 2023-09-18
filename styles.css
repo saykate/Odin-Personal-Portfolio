@@ -29,7 +29,6 @@
 
 .header-container {
     padding: var(--pad-med);
-    /* border: 2px solid green; */
 }
 
 .holder-box {
@@ -43,7 +42,6 @@
     border-radius: var(--radius);
     box-shadow: var(--box-shadow);
     width: 300px;
-    /* border: 2px solid yellow; */
 }
 
 h1 {
@@ -52,7 +50,6 @@ h1 {
     color: var(--clr-neutral);
     font-size: 3rem;
     font-weight: var(--fw-100);
-    /* border: 2px solid black; */
 }
 
 .icon {
@@ -70,7 +67,6 @@ h1 {
 .about-container {
     padding-top: var(--pad-med);
     padding-bottom: 2.5rem;
-    /* border: 2px solid red; */
 }
 
 h2 {
