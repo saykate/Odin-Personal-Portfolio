@@ -36,7 +36,7 @@
     position: relative;
     display: grid;
     justify-items: center;
-    border: .5px solid black;
+    border: .5px solid rgba(0,0,0,0);
 }
 
 .header-img {
